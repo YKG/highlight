@@ -120,6 +120,17 @@ function wp_add_inline_script( $handle, $data, $position = 'after' ) {
 	return wp_scripts()->add_inline_script( $handle, $data, $position );
 }
 
+function ykg_replace_script_ref($src) {
+    //    var_dump([$handle, $src]);
+    $domain_path = "http://localhost/";
+    $url_path = 'http://videogo.crunchpress.com/';
+    if (strpos($src, $domain_path) !== false) {
+        return str_replace($domain_path, $url_path, $src);
+    } else {
+        return $src;
+    }
+}
+
 /**
  * Register a new script.
  *
@@ -145,6 +156,8 @@ function wp_add_inline_script( $handle, $data, $position = 'after' ) {
 function wp_register_script( $handle, $src, $deps = array(), $ver = false, $in_footer = false ) {
 	$wp_scripts = wp_scripts();
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
+
+	$src = ykg_replace_style_ref($src);
 
 	$registered = $wp_scripts->add( $handle, $src, $deps, $ver );
 	if ( $in_footer ) {
@@ -266,6 +279,8 @@ function wp_enqueue_script( $handle, $src = '', $deps = array(), $ver = false, $
 
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
+//    var_dump([$handle, $src]);
+    $src = ykg_replace_script_ref($src);
 
 	if ( $src || $in_footer ) {
 		$_handle = explode( '?', $handle );
