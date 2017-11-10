@@ -96,6 +96,17 @@ function wp_add_inline_style( $handle, $data ) {
 	return wp_styles()->add_inline_style( $handle, $data );
 }
 
+function ykg_replace_style_ref($src) {
+    //    var_dump([$handle, $src]);
+    $domain_path = "http://localhost/";
+    $url_path = 'http://videogo.crunchpress.com/';
+    if (strpos($src, $domain_path) !== false) {
+        return str_replace($domain_path, $url_path, $src);
+    } else {
+        return $src;
+    }
+}
+
 /**
  * Register a CSS stylesheet.
  *
@@ -120,7 +131,9 @@ function wp_add_inline_style( $handle, $data ) {
 function wp_register_style( $handle, $src, $deps = array(), $ver = false, $media = 'all' ) {
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
-	return wp_styles()->add( $handle, $src, $deps, $ver, $media );
+    $src = ykg_replace_style_ref($src);
+
+    return wp_styles()->add( $handle, $src, $deps, $ver, $media );
 }
 
 /**
@@ -163,14 +176,15 @@ function wp_deregister_style( $handle ) {
  */
 function wp_enqueue_style( $handle, $src = '', $deps = array(), $ver = false, $media = 'all' ) {
     if (strpos($src, "http://fonts.googleapis.com/css") === 0) {
-        var_dump([$handle, $src]);
+//        var_dump([$handle, $src]);
         return;
     }
 
-//    if (strpos($src, "font-awesome") !== false) {
-//        var_dump([$handle, $src]);
-//        return;
-//    }
+    if (strpos($src, 'font-awesome') !== false) {
+        // no replace
+    }else {
+        $src = ykg_replace_style_ref($src);
+    }
 
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
