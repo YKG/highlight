@@ -1,0 +1,150 @@
+.owl-carousel.owl-loaded, .cp-today-video {
+	direction: ltr;
+}
+.cp-heading-outer h2, .cp-latest-item .cp-text .cp-top .cp-meta-list, .cp-most-listed .cp-thumb {
+	float: right;
+}
+.cp-heading-outer .cp-listed {
+	float: left;
+}
+.cp-heading-outer h2:before {
+	left: inherit;
+	right: 0;
+}
+#wrapper #featured-video .owl-controls, #wrapper .cp-comedy-video .owl-controls, .cp_viewed-slider .owl-controls, .cp_viewed-slider2 .owl-controls {
+	right: inherit;
+	left: 5px;
+	top: -35px;
+}
+.cp-most-listed .cp-text, .cp-video-item .cp-text, .cp-latest-item .cp-text, .featured-blocks .cp-thumb .cp-caption .cp-text, .cp-video-grid-listing .cp-caption, .cp-thumb .cp-caption .cp-text {
+	text-align: right;
+}
+.cp-music-list .cp-thumb {
+	float: right;
+	margin: 0 0 0 15px;
+}
+.cp-post-content {
+	text-align: right;
+}
+.cp-ft-widget-info .widget.widget-catrgories {
+	clear: both;
+	width: 225px;
+	text-align: right;
+}
+.tagcloud {
+	text-align: right;
+}
+.widget-form form [type="submit"], .widget_search #searchform_widget button {
+	right: inherit;
+	left: 0;
+}
+.widget-form form input[type="text"], .widget_search input[type="text"], .widget_search #searchform_widget input[type="text"], .widget-recent-post .cp-holder .cp-text, .widget .cp-heading-outer h2, .ugc-inner-wrapper, .ugc-inner-wrapper .ugc-input-wrapper input, .cp-md-banner-item figcaption, .cp-md-banner-item, .cp-md-banner-item figcaption, .cp-blog-item .cp-text .cp-inner-holder, .cp-author-info-holder .cp-text, .cp-comments-holder, .widget h3, #comment, #commentform input[type="text"], #commentform input[type="email"], .comment-form-comment > textarea {
+	text-align: right;
+}
+.widget-recent-post .cp-holder .cp-thumb2 {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.widget_archive li, .widget_categories ul li {
+	text-align: left;
+}
+.widget_archive li a, .widget_categories ul li a, .cp-mega-menu ul li {
+	float: right;
+}
+.cp-mega-menu > ul > li + li:before {
+	color: #ffffff;
+	content: "|";
+	font-size: 14px;
+	line-height: 14px;
+	display: none;
+}
+.cp-mega-menu > ul > li + li:after {
+	color: #ffffff;
+	content: "|";
+	font-size: 14px;
+	line-height: 14px;
+}
+.cp_header .col-md-10.col-sm-9.col-xs-12 {
+	float: right;
+}
+.cp_header .col-md-2.col-sm-3.col-xs-12 {
+	float: left;
+}
+.cp-navigation-row .cp-logo {
+	float: right;
+	margin: 0 5px 0 80px;
+}
+.cp_side-menu, .cp-nav-holder, .cp_header .cp-mega-menu ul li {
+	float: right;
+	text-align: right;
+}
+.cp-blog-item .cp-icon-box, .cp-blog-item .cp-text .cp-icon-box {
+	float: right;
+	margin-right: 0px;
+	margin-left: 40px;
+}
+.cp-author-info-holder .cp-thumb {
+	float: right;
+	margin: 0 0 0 26px;
+}
+#respond #commentform > p {
+	text-align: right;
+	padding: 0 15px 0 0;
+}
+.sidebar .widget_categories a, .sidebar .widget_archive li a, .sidebar .widget_pages ul li a, .sidebar .widget_meta li a, .sidebar .widget_recent_entries li a, .sidebar .widget_rss ul li {
+	float: right;
+}
+#wrapper .footer .widget h4 a::before, .sidebar .widget_categories a::before, .sidebar .widget_archive li a::before, .sidebar .widget_pages ul li a::before, .sidebar .widget_meta li a::before, .sidebar .widget_recent_entries li a::before, .sidebar .widget_nav_menu .menu-main-menu-container li a::before, .footer .widget_categories ul li a::before, .footer .widget_pages li a::before, .footer .widget_meta ul il a::before, .footer .widget_meta ul li a::before, .footer .widget_recent_comments ul li::before, .footer .widget_recent_entries ul li a::before, .footer .widget_nav_menu .menu li a::before, .footer .widget_archive li a::before {
+	float: right;
+	margin-left: 10px;
+}
+#commentform input[type="text"], #commentform input[type="email"], .comment-form-comment > textarea {
+	padding: 0 15px;
+}
+#commentform input[type="submit"] {
+	margin: 0px;
+}
+.images {
+	float: right;
+	position: relative;
+	width: 30%;
+}
+#main-woo .onsale {
+	left: inherit;
+	right: 20px;
+}
+#main-woo .summary.entry-summary, #main-woo .summary.entry-summary .price,
+.woocommerce-tabs .panel, .woocommerce-message, .woocommerce .login, .woocommerce .checkout_coupon, .woocommerce .woocommerce-info, .woocommerce-billing-fields,
+#customer_details input.input-text, #customer_details textarea, .woocommerce .login .input-text, .checkout_coupon .input-text, .register input.input-text, .woocommerce .form-row .select2-container .select2-choice,
+.woocommerce-additional-fields, #customer_details input.input-text, #customer_details textarea, .woocommerce .login .input-text, .checkout_coupon .input-text, .register input.input-text, .woocommerce .form-row .select2-container .select2-choice, .entry-content-cp .checkout, #customer_details, #order_review, #order_review .shop_table th.product-name, #order_review .shop_table th.product-total, #order_review .shop_table .cart-subtotal, #order_review .shop_table .order-total, #order_review .shop_table th, #order_review .shop_table td, .cp-text-box, .cp-get-in-touch-outer .cp-top-holder
+
+
+ {
+	text-align: right;
+}
+#main-woo .woocommerce-product-rating .star-rating,
+.cp-tab-box .nav-tabs > li, .woocommerce .woocommerce-tabs .tabs > li,
+.woocommerce p.stars span, .woocommerce-page p.stars span
+
+
+ {
+	float: right;
+}
+
+#main-woo .woocommerce-product-rating .woocommerce-review-link {margin:0 10px;}
+.summary.entry-summary .quantity, .woocommerce .woocommerce-message .wc-forward {
+    float: right;
+    margin-left: 10px;
+	margin-right:0px;
+}
+
+.frame.cp-img-effect-1 img {
+    height: auto;
+    width: 100%;
+}
+
+
+.cp_footer .widget > ul > li,
+.textwidget, .widget_nav_menu .menu li, .widget_pages li
+
+ {text-align:right;}

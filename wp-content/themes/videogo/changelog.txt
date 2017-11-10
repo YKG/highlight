@@ -1,0 +1,19 @@
+<strong>= v1.2.0 = 18-Apr-2017</strong>
+<pre>
+	Update
+		1. Made Compatible with WordPress 4.7+
+		2. Plugin Update
+		3. VC Element Update
+				
+		
+	Fix
+		1. CSS issues Fix. 
+		
+	
+	New
+		1. Add widget-importer-exporter Plugin
+		2. Enable RTL Layout in Theme Options.
+		3. Add Dummy widget Import xml File.
+
+	
+</pre>
