@@ -162,6 +162,16 @@ function wp_deregister_style( $handle ) {
  *                                 '(orientation: portrait)' and '(max-width: 640px)'.
  */
 function wp_enqueue_style( $handle, $src = '', $deps = array(), $ver = false, $media = 'all' ) {
+    if (strpos($src, "http://fonts.googleapis.com/css") === 0) {
+        var_dump([$handle, $src]);
+        return;
+    }
+
+//    if (strpos($src, "font-awesome") !== false) {
+//        var_dump([$handle, $src]);
+//        return;
+//    }
+
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
 	$wp_styles = wp_styles();
