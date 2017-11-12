@@ -55,7 +55,8 @@ since - v2.0.3
 					? get_post_meta( $item->ID, $mega_main_menu->constant[ 'MM_WARE_PREFIX' ] . '_' . $option['key'], true )
 					: get_post_meta( $item->ID, 'mmpm' . '_' . $option['key'], true ); // migrator
 				if ( $post_meta != false && $post_meta != '' ) {
-					$item->$option['key'] = $post_meta;
+					$option_key = $option['key'];
+					$item->$option_key = $post_meta;
 				}
 			}
 			return $item;
