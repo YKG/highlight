@@ -131,7 +131,11 @@ function ykg_replace_style_ref($src) {
 function wp_register_style( $handle, $src, $deps = array(), $ver = false, $media = 'all' ) {
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
-    $src = ykg_replace_style_ref($src);
+    if (strpos($src, 'icomoon') !== false) {
+        // no replace
+    } else {
+        $src = ykg_replace_style_ref($src);
+    }
 
     return wp_styles()->add( $handle, $src, $deps, $ver, $media );
 }
@@ -182,7 +186,7 @@ function wp_enqueue_style( $handle, $src = '', $deps = array(), $ver = false, $m
 
     if (strpos($src, 'font-awesome') !== false) {
         // no replace
-    }else {
+    } else {
         $src = ykg_replace_style_ref($src);
     }
 
