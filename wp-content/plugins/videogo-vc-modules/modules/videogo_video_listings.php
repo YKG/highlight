@@ -83,8 +83,9 @@ if(!class_exists("videogo_video_listings")){
 																				 
 			 global $wpdb;
 			 global $post,$paged;
-		
-		$query = "SELECT wpp.ID video_id,wpp.post_title video_title,wpp.post_content video_content FROM wp_posts AS wpp   INNER JOIN wp_term_relationships AS wtr ON wpp.ID = wtr.object_id INNER JOIN wp_postmeta wppm ON wppm.post_id = wpp.ID WHERE wtr.term_taxonomy_id = $category_id group by wppm.post_id LIMIT 0,$videogo_listing_count";
+
+//            $query = "SELECT wpp.ID video_id,wpp.post_title video_title,wpp.post_content video_content FROM wp_posts AS wpp   INNER JOIN wp_term_relationships AS wtr ON wpp.ID = wtr.object_id INNER JOIN wp_postmeta wppm ON wppm.post_id = wpp.ID WHERE wtr.term_taxonomy_id = $category_id group by wppm.post_id LIMIT 0,$videogo_listing_count";
+            $query = "SELECT wpp.ID video_id,wpp.post_title video_title,wpp.post_content video_content FROM wp_posts AS wpp   INNER JOIN wp_term_relationships AS wtr ON wpp.ID = wtr.object_id INNER JOIN wp_postmeta wppm ON wppm.post_id = wpp.ID WHERE wtr.term_taxonomy_id = $category_id group by wppm.post_id DESC LIMIT 0,$videogo_listing_count";
 			$videogo_posts = $wpdb->get_results($query);
 
 			if($videogo_style == 'style1'){
@@ -145,7 +146,7 @@ if(!class_exists("videogo_video_listings")){
 				$output .= '</section>';	
 				
 			} else if($videogo_style == 'style2'){
-				
+
       				$output .= '<div class="cp-outer-holder '.$el_class.'">';
 					$output .= '<div class="cp-most-view-outer pd-b60">';
 					$output .= '<div class="cp-heading-outer">';
@@ -157,7 +158,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="cp_viewed-slider">';
 					
 				foreach($videogo_posts as $videoz){
-					
+
 					$post_detail_xml = get_post_meta( $videoz->video_id , 'post_detail_xml', true);
 						if($post_detail_xml <> ''){
 							$videogo_post_xml = new DOMDocument ();
