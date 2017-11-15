@@ -132,7 +132,7 @@ function wp_register_style( $handle, $src, $deps = array(), $ver = false, $media
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
     if (strpos($src, 'icomoon') !== false) {
-        // no replace
+        $src = 'http://icomoon-1255464466.coscd.myqcloud.com/icomoon.css';
     } else {
         $src = ykg_replace_style_ref($src);
     }

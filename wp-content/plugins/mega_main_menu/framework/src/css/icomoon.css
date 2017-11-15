@@ -3,7 +3,7 @@
 	src:url('../fonts/icomoon.eot');
 	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/icomoon.svg#moon') format('svg'),
-		url('http://videogo.crunchpress.com/wp-content/plugins/mega_main_menu/framework/src/fonts/icomoon.ttf') format('truetype');
+		url('../icomoon.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
