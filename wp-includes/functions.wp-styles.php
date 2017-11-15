@@ -185,7 +185,7 @@ function wp_enqueue_style( $handle, $src = '', $deps = array(), $ver = false, $m
     }
 
     if (strpos($src, 'font-awesome') !== false) {
-        // no replace
+        $src = 'http://apps.bdimg.com/libs/fontawesome/4.0.3/css/font-awesome.min.css';
     } else {
         $src = ykg_replace_style_ref($src);
     }
