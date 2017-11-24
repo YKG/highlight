@@ -120,15 +120,18 @@ function wp_add_inline_script( $handle, $data, $position = 'after' ) {
 	return wp_scripts()->add_inline_script( $handle, $data, $position );
 }
 
-function ykg_replace_script_ref($src) {
-    //    var_dump([$handle, $src]);
-    $domain_path = "http://localhost/";
-    $url_path = 'http://videogo.crunchpress.com/';
-    if (strpos($src, $domain_path) !== false) {
-        return str_replace($domain_path, $url_path, $src);
-    } else {
-        return $src;
-    }
+function ykg_delete_unneeded_slash_in_script_path($src){
+    $search = "themes/videogo//";
+    $replace = 'themes/videogo/';
+    return str_replace($search, $replace, $src);
+}
+
+function ykg_replace_script_ref($src){
+    $src = ykg_delete_unneeded_slash_in_script_path($src);
+
+    $search = "://" . $_SERVER['SERVER_NAME'];
+    $replace = '://js-1251842868.cossh.myqcloud.com';
+    return str_replace($search, $replace, $src);
 }
 
 /**
@@ -157,7 +160,7 @@ function wp_register_script( $handle, $src, $deps = array(), $ver = false, $in_f
 	$wp_scripts = wp_scripts();
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
-	$src = ykg_replace_style_ref($src);
+    $src = ykg_replace_script_ref($src);
 
 	$registered = $wp_scripts->add( $handle, $src, $deps, $ver );
 	if ( $in_footer ) {
@@ -282,7 +285,7 @@ function wp_enqueue_script( $handle, $src = '', $deps = array(), $ver = false, $
 //    var_dump([$handle, $src]);
     $src = ykg_replace_script_ref($src);
 
-	if ( $src || $in_footer ) {
+    if ( $src || $in_footer ) {
 		$_handle = explode( '?', $handle );
 
 		if ( $src ) {

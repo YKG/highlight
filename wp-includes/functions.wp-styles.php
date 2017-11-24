@@ -96,15 +96,18 @@ function wp_add_inline_style( $handle, $data ) {
 	return wp_styles()->add_inline_style( $handle, $data );
 }
 
-function ykg_replace_style_ref($src) {
-    //    var_dump([$handle, $src]);
-    $domain_path = "http://localhost/";
-    $url_path = 'http://videogo.crunchpress.com/';
-    if (strpos($src, $domain_path) !== false) {
-        return str_replace($domain_path, $url_path, $src);
-    } else {
-        return $src;
-    }
+function ykg_delete_unneeded_slash_in_css_path($src){
+    $search = "themes/videogo//";
+    $replace = 'themes/videogo/';
+    return str_replace($search, $replace, $src);
+}
+
+function ykg_replace_css_ref($src){
+    $src = ykg_delete_unneeded_slash_in_css_path($src);
+
+    $search = "://" . $_SERVER['SERVER_NAME'];
+    $replace = '://css-1251842868.cosbj.myqcloud.com';
+    return str_replace($search, $replace, $src);
 }
 
 /**
@@ -131,11 +134,7 @@ function ykg_replace_style_ref($src) {
 function wp_register_style( $handle, $src, $deps = array(), $ver = false, $media = 'all' ) {
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
-    if (strpos($src, 'icomoon') !== false) {
-        $src = 'http://icomoon-1255464466.coscd.myqcloud.com/icomoon.css';
-    } else {
-        $src = ykg_replace_style_ref($src);
-    }
+    $src = ykg_replace_css_ref($src);
 
     return wp_styles()->add( $handle, $src, $deps, $ver, $media );
 }
@@ -184,11 +183,7 @@ function wp_enqueue_style( $handle, $src = '', $deps = array(), $ver = false, $m
         return;
     }
 
-    if (strpos($src, 'font-awesome') !== false) {
-        $src = 'http://apps.bdimg.com/libs/fontawesome/4.0.3/css/font-awesome.min.css';
-    } else {
-        $src = ykg_replace_style_ref($src);
-    }
+    $src = ykg_replace_css_ref($src);
 
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__ );
 
