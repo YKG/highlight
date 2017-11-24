@@ -57,8 +57,8 @@
 						$videogo_post_idz_header = array();
 						$videogo_top_header_post_idz = get_post_meta ( $post->ID, "page-option-number-of-post", true ); 
 						$videogo_post_idz_header = explode(",",$videogo_top_header_post_idz);
-				?>
-                  <div class="cp-video-grid-block">
+				?><!--
+               --><div class="cp-video-grid-block">
                   <ul  class="cp-video-grid-listing">
      <?php
 	 

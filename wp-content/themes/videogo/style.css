@@ -3966,11 +3966,14 @@ a img.aligncenter {
 }
 .cp_banner_full_width .cp-slider-block {
 	width: 54.5%;
-	float: left;
+	/*float: left;*/
+	display: inline-block;
+	vertical-align: top;
 }
 .cp_banner_full_width .cp-video-grid-block {
 	width: 45.5%;
-	float: left;
+	/*float: left;*/
+	display: inline-block;
 	padding-left: 2px;
 	box-sizing: border-box;
 }
