@@ -76,7 +76,6 @@
 							<div class="cp-caption">
 							<a class="play-video" href="<?php echo esc_url(get_permalink($videogo_header_post_id)); ?>"><?php echo esc_html("Play"); ?></a>
 							<h4><a href="<?php echo esc_url(get_permalink($videogo_header_post_id)); ?>"><?php echo esc_attr(get_the_title($videogo_header_post_id)); ?></a></h4>
-							<strong>by <?php echo esc_attr( get_the_author_meta( 'user_nicename', $videogo_header_post_author )); ?></strong>
 							</div>
 							</div>
 							</li>
