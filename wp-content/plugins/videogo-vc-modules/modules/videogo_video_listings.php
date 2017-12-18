@@ -292,7 +292,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<figcaption class="cp-caption"> <a href="'.get_permalink($videoz->video_id).'" class="play-video">Play</a> </figcaption>';
 					$output .= '</figure>';
 					$output .= '<div class="cp-text">';
-					$output .= '<h4 class="minus-margin"><a href="'.get_permalink($videoz->video_id).'">'.$videoz->video_title.'</a></h4>';
+					$output .= '<h4><a href="'.get_permalink($videoz->video_id).'">'.$videoz->video_title.'</a></h4>';
 					$output .= '<ul class="cp-meta-list">';
 					$output .= '<li><span>' . $videogo_post_views . '</span></li>';
 					$output .= '</ul>';
