@@ -110,9 +110,9 @@ if(!class_exists("videogo_video_listings")){
 							$videogo_post_xml->loadXML ( $post_detail_xml );
 							$videogo_video_url = videogo_find_xml_value($videogo_post_xml->documentElement,'video_url_type');
 						}
-					
-					$videogo_post_views = videogo_getPostViews(get_the_ID());
-					$image_full = wp_get_attachment_image_src( get_post_thumbnail_id( $videoz->video_id ), "full" ); 
+
+					$videogo_post_views = videogo_getPostViews($videoz->video_id);
+					$image_full = wp_get_attachment_image_src( get_post_thumbnail_id( $videoz->video_id ), "full" );
 					$image_url = $image_full[0];
 					
 					if($image_url <> ''){
@@ -132,8 +132,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="cp-text">';
 					$output .= '<h4><a href="'.get_permalink($videoz->video_id).'">'.$videoz->video_title.'</a></h4>';
 					$output .= '<ul class="cp-meta-list">';
-					$output .= '<li>'.esc_attr(get_the_date('l')).', '.esc_attr(get_the_date('M')).' '.esc_attr(get_the_date('j')).', '.esc_attr(get_the_date('Y')).'</li>';
-					$output .= '<li>by '.esc_attr(get_the_author()).', <span>'.$videogo_post_views.'</span></li>';
+					$output .= '<li><span>' . $videogo_post_views . '</span></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '</div>';

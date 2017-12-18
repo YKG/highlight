@@ -539,9 +539,9 @@ function videogo_getPostViews($videogo_postID){
     if($videogo_count==''){
         delete_post_meta($videogo_postID, $videogo_count_key);
         add_post_meta($videogo_postID, $videogo_count_key, '0');
-        return "0 View";
+        return "浏览 0";
     }
-    return $videogo_count.' Views';
+    return '浏览 ' . $videogo_count;
 }
 function videogo_setPostViews($videogo_postID) {
     $videogo_count_key = 'post_views_count';
