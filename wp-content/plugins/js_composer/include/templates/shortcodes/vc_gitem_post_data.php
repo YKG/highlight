@@ -35,11 +35,15 @@ if ( $data_source ) {
 if ( $use_custom_fonts && ! empty( $google_fonts_data ) && isset( $google_fonts_data['values']['font_family'] ) ) {
 	wp_enqueue_style( 'vc_google_fonts_' . vc_build_safe_css_class( $google_fonts_data['values']['font_family'] ), '//fonts.googleapis.com/css?family=' . $google_fonts_data['values']['font_family'] . $subsets );
 }
+if ($data_source == 'post_date') {
+	return;
+}
 $output .= '<div class="' . esc_attr( $css_class ) . '" >';
 $style = '';
 if ( ! empty( $styles ) ) {
 	$style = 'style="' . esc_attr( implode( ';', $styles ) ) . '"';
 }
+$style = str_replace("font-family:Roboto;", "", $style);
 $output .= '<' . $font_container_data['values']['tag'] . ' ' . $style . ' >';
 $output .= $content;
 $output .= '</' . $font_container_data['values']['tag'] . '>';
