@@ -217,30 +217,22 @@
 			if($videogo_heading_h6 <> ''){ echo 'h6{ font-size:'.esc_attr($videogo_heading_h6).'px !important; }'; }
 			
 			/* Body Font Size */
-			$videogo_font_size_normal = videogo_get_themeoption_value('videogo_font_size_normal','typography_settings');
-			if($videogo_font_size_normal <> ''){ echo 'body{font-size:'.esc_attr($videogo_font_size_normal).'px !important;}'; }
-			
-			/* Body Font Family */
-			$videogo_font_google = videogo_get_themeoption_value('videogo_font_google','typography_settings');
-			if($videogo_font_google <> 'Default'){ echo '.classes-page .skill-inner .label, body,.comments-list li .text p, .header-4-address strong.info,.header-4-address a.email,strong.copy,.widget-box-inner p,.blog-post-box .text p,.box-1 p, .box-1 .textwidget,.get-touch-form input,.get-touch-form strong.title,.footer-copyright strong.copy,#inner-banner p,.welcome-text-box p,.about-me-text p,.about-me-text blockquote q,.team-box .text p,.accordition-box .accordion-inner p,.facts-content-box p,.our-detail-box p,.our-detail-box ul li,.widget_em_widget ul li,.sidebar-recent-post ul li p,blockquote p,blockquote q,.author-box .text p,.contact-page address ul li strong.title,.contact-page address ul li strong.ph,.contact-page address ul li strong.mob,.contact-page address ul li a.email,a.comment-reply-link,.timeline-project-box > .text p,.comments .text p,.event-row .text p,.project-detail p,.news-box .text p,.error-page p,.cp-columns p,.cp-list-style ul li,.customization-options ul li,.cp-accordion .accordion-inner strong,.list-box ul li,.list-box2 ul li,.list-box3 ul li,.tab-content p, .tab-content-area p,.blockquote-1 q,.blockquote-2 q,.map h3,.even-box .caption p,.header-4-address strong.info,.header-4-address a.email,strong.copy,.widget-box-inner p, .cp-theme-style-1 p { font-family:"'.esc_attr($videogo_font_google).'" !important;}'; }else{ 
-			echo '';
-			}
-			
+            $font_family = '"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; ';
+
+            echo '.classes-page .skill-inner .label, body,.comments-list li .text p, .header-4-address strong.info,.header-4-address a.email,strong.copy,.widget-box-inner p,.blog-post-box .text p,.box-1 p, .box-1 .textwidget,.get-touch-form input,.get-touch-form strong.title,.footer-copyright strong.copy,#inner-banner p,.welcome-text-box p,.about-me-text p,.about-me-text blockquote q,.team-box .text p,.accordition-box .accordion-inner p,.facts-content-box p,.our-detail-box p,.our-detail-box ul li,.widget_em_widget ul li,.sidebar-recent-post ul li p,blockquote p,blockquote q,.author-box .text p,.contact-page address ul li strong.title,.contact-page address ul li strong.ph,.contact-page address ul li strong.mob,.contact-page address ul li a.email,a.comment-reply-link,.timeline-project-box > .text p,.comments .text p,.event-row .text p,.project-detail p,.news-box .text p,.error-page p,.cp-columns p,.cp-list-style ul li,.customization-options ul li,.cp-accordion .accordion-inner strong,.list-box ul li,.list-box2 ul li,.list-box3 ul li,.tab-content p, .tab-content-area p,.blockquote-1 q,.blockquote-2 q,.map h3,.even-box .caption p,.header-4-address strong.info,.header-4-address a.email,strong.copy,.widget-box-inner p, .cp-theme-style-1 p  ';
+            echo '{ font-family: '. $font_family . '}';
+
 			/* Boxed Scheme Background */
 			$videogo_videogo_boxed_scheme = videogo_get_themeoption_value('videogo_boxed_scheme','general_settings');
 			$videogo_select_layout_cp = videogo_get_themeoption_value('videogo_select_layout_cp','general_settings');
 			if($videogo_select_layout_cp == 'box_layout'){ echo '.boxed{background:'.esc_attr($videogo_videogo_boxed_scheme).';}'; }
 			
 			/* Heading Font Family */
-			$videogo_font_google_heading = videogo_get_themeoption_value('videogo_font_google_heading','typography_settings');
-			if($videogo_font_google_heading <> 'Default'){ echo '
-			h1, h2, h3, h4, h5, h6,
-			{ font-family:"'.esc_attr($videogo_font_google_heading).'" !important;}'; }else{ echo 'h1, h2, h3, h4, h5, h6{}';}
-			
-			/* Menu Font Family */
-			$videogo_menu_font_google = videogo_get_themeoption_value('videogo_menu_font_google','typography_settings');
-			if($videogo_menu_font_google <> 'Default'){ echo '#mega_main_menu.main-menu > .menu_holder > .menu_inner > .nav_logo > .mobile_toggle > .mobile_button, #mega_main_menu.main-menu > .menu_holder > .menu_inner > ul > li > .item_link, #mega_main_menu.main-menu > .menu_holder > .menu_inner > ul > li > .item_link .link_text, #mega_main_menu.main-menu > .menu_holder > .menu_inner > ul > li.nav_search_box *, #mega_main_menu.main-menu > .menu_holder > .menu_inner > ul > li .post_details > .post_title, #mega_main_menu.main-menu > .menu_holder > .menu_inner > ul > li .post_details > .post_title > .item_link, .navigation ul, #mega_main_menu_ul > li > a > span > span, .cp-mega-menu > #mega-menu > li > a{font-family:"'.esc_attr($videogo_menu_font_google).'" !important;}';}else{ echo '#nav{font-family:"Open Sans",sans-serif;}';}
-		echo '</style>';
+            echo ' h1, h2, h3, h4, h5, h6, #nav';
+            echo '{ font-family: '. $font_family . '}';
+
+        /* Menu Font Family */
+        echo '</style>';
 		/******************** Typography Settings **************************/
 		$videogo_primary_color = videogo_get_themeoption_value('videogo_primary_color','general_settings');	
 		$videogo_secondary_color = videogo_get_themeoption_value('videogo_secondary_color','general_settings');
