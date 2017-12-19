@@ -159,8 +159,8 @@ if(!class_exists("videogo_videogo")){
 					$output .= '<div class="cp-text">';
 					$output .= '<h3><a href="'.get_permalink($videoz->video_id).'">'.$videoz->video_title.'</a></h3>';
 					$output .= '<ul class="cp-meta-list">';
-					$output .= '<li>'.esc_attr(get_the_date('l')).', '.esc_attr(get_the_date('M')).' '.esc_attr(get_the_date('j')).', '.esc_attr(get_the_date('Y')).'</li>';
-					$output .= '<li>by '.esc_attr(get_the_author()).', <span>'.$videogo_post_views.'</span></li>';
+					$output .= '<li>'.esc_attr(get_the_date('Y.n.j G:i')).'</li>';
+					$output .= '<li><span>'.$videogo_post_views.'</span></li>';
 					$output .= '</ul>';
 					$output .= '<p>'.$video_content.'</p>';
 					$output .= '<a class="read-more" href="'.get_permalink($videoz->video_id).'">{+}</a>';
@@ -220,8 +220,8 @@ if(!class_exists("videogo_videogo")){
 					$output .= '<div class="cp-text">';
 					$output .= '<h4><a href="'.get_permalink($videoz->video_id).'">'.$videoz->video_title.'</a></h4>';
 					$output .= '<ul class="cp-meta-list">';
-					$output .= '<li>'.esc_attr(get_the_date('l')).', '.esc_attr(get_the_date('M')).' '.esc_attr(get_the_date('j')).', '.esc_attr(get_the_date('Y')).'</li>';
-					$output .= '<li>by '.esc_attr(get_the_author()).', <span>'.$videogo_post_views.'</span></li>';
+					$output .= '<li>'.esc_attr(get_the_date('Y.n.j G:i')).'</li>';
+					$output .= '<li><span>'.$videogo_post_views.'</span></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '</figcaption>';
@@ -273,8 +273,8 @@ if(!class_exists("videogo_videogo")){
 						$output .= '<div class="cp-text">';
 						$output .= '<h4><a href="'.get_permalink($videoz->video_id).'">'.$videoz->video_title.'</a></h4>';
 						$output .= '<ul class="cp-meta-list">';
-						$output .= '<li>'.esc_attr(get_the_date('l')).', '.esc_attr(get_the_date('M')).' '.esc_attr(get_the_date('j')).', '.esc_attr(get_the_date('Y')).'</li>';
-						$output .= '<li>by '.esc_attr(get_the_author()).', <span>'.$videogo_post_views.'</span></li>';
+						$output .= '<li>'.esc_attr(get_the_date('Y.n.j G:i')).'</li>';
+						$output .= '<li><span>'.$videogo_post_views.'</span></li>';
 						$output .= '</ul>';
 						$output .= '</div>';
 						$output .= '</div><!-- Video Item End-->';
