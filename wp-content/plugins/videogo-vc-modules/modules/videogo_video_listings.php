@@ -177,7 +177,7 @@ if(!class_exists("videogo_video_listings")){
 						$video_image = '<a href="'.get_permalink($videoz->video_id).'"><img src="'.$video_image_url.'" alt="video listing image '.$videoz->video_id.'"></a>';
 					}
 					
-						$video_content = substr($videoz->video_content, 0, strrpos(substr($videoz->video_content, 0, 315), ' ')) . '...';
+						$video_content = mb_substr($videoz->video_content, 0, 140) . '...';
 
 					$output .= '<div class="item">';
 					$output .= '<div class="cp-most-listed">';
@@ -392,7 +392,7 @@ if(!class_exists("videogo_video_listings")){
 						$video_image = '<a href="'.get_permalink($videoz->video_id).'"><img src="'.$video_image.'" alt="video image '.$videoz->video_id.'"></a>';
 					}
 					
-						$video_content = substr($videoz->video_content, 0, strrpos(substr($videoz->video_content, 0, 220), ' ')) . '...';
+						$video_content = mb_substr($videoz->video_content, 0, 100) . '...';
                   
                   if($videogo_post_counter == 0){
 					  
