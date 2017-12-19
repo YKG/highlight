@@ -89,8 +89,9 @@ if(!class_exists("videogo_videogo")){
 		}
 		
 		function videogo_videogo_shortcode( $atts, $content = null ) {
-		
-		extract( shortcode_atts( array(
+			$atts['videogo_words_count'] = '140'; # YKG DIRTY FIX
+
+			extract( shortcode_atts( array(
 			'videogo_count' => '',
 			'videogo_words_count' => '',
 			'videogo_category' => '',
@@ -142,7 +143,7 @@ if(!class_exists("videogo_videogo")){
 					}
 					
 					if (strlen($videoz->video_content) > $videogo_words_count){
-						$video_content = substr($videoz->video_content, 0, strrpos(substr($videoz->video_content, 0, $videogo_words_count), ' ')) . '...';
+						$video_content = substr($videoz->video_content, 0, $videogo_words_count) . '...';
 					} else {
 						$video_content = $videoz->video_content;
 					}
