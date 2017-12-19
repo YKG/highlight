@@ -143,7 +143,7 @@ if(!class_exists("videogo_videogo")){
 					}
 					
 					if (strlen($videoz->video_content) > $videogo_words_count){
-						$video_content = substr($videoz->video_content, 0, $videogo_words_count) . '...';
+						$video_content = mb_substr($videoz->video_content, 0, $videogo_words_count) . '...';
 					} else {
 						$video_content = $videoz->video_content;
 					}
