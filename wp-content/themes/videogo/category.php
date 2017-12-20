@@ -116,32 +116,8 @@ get_header ();
 													</h3>
 													<div class="detail-row">
 														<ul class="cp-meta-list">
-															<li>
-																<a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'),get_the_time('d')); ?>"><?php echo esc_attr(get_the_date(get_option('date_format')));?></a>
-															</li>
-															<li><?php esc_html_e('By: ','videogo');?><?php the_author_posts_link(); ?></li>
-															<li>
-																<?php	
-																	$videogo_categories = get_the_category();
-																	$videogo_catArray = array();
-																	if($videogo_categories){
-																		foreach($videogo_categories as $videogo_category) {
-																				$videogo_catArray[] = '<a href="'.esc_url(get_category_link( $videogo_category->term_id )).'" title="' . esc_attr( $videogo_category->name  ) . '">'.esc_attr($videogo_category->cat_name).'</a>';
-																		}
-																		$videogo_cat = implode(', ',$videogo_catArray);
-																		echo html_entity_decode($videogo_cat);
-																	} 
-																?>
-															</li>
-															<li> 
-															  <?php
-																	/* Get Post Comment */
-																	comments_popup_link( esc_html__('0 Comment','videogo'),
-																	esc_html__('1 Comment','videogo'),
-																	esc_html__('% Comments','videogo'), '',
-																	esc_html__('Comments are off','videogo') );
-																?>	
-															</li>
+                                                            <li><?php echo esc_attr(get_the_date('Y.n.j G:i')); ?></li>
+                                                            <li><span><?php echo videogo_getPostViews($post->ID); ?></span></li>
 														</ul>
 													</div>
 													<?php the_content(); ?>
