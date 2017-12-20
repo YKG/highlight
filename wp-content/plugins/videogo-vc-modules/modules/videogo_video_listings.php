@@ -96,7 +96,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="col-md-12 cp-heading-outer">';
 					$output .= '<h2>'.$videogo_listing_category.'</h2>';
 					$output .= '<ul class="cp-listed">';
-					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">View All</a></li>';
+					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">更多</a></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '</div>';
@@ -151,7 +151,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="cp-heading-outer">';
 					$output .= '<h2>'.$videogo_listing_category.'</h2>';
 					$output .= '<ul class="cp-listed">';
-					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">View All</a></li>';
+					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">更多</a></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '<div class="cp_viewed-slider">';
@@ -208,7 +208,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="cp-heading-outer">';
 					$output .= '<h2>'.$videogo_listing_category.'</h2>';
 					$output .= '<ul class="cp-listed">';
-					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">View All</a></li>';
+					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">更多</a></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '<ul class="cp-categories-listed">';
@@ -259,7 +259,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="cp-heading-outer">';
 					$output .= '<h2>'.$videogo_listing_category.'</h2>';
 					$output .= '<ul class="cp-listed">';
-					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">View All</a></li>';
+					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">更多</a></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '<div id="comedy-videos">';
@@ -312,7 +312,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="col-md-12 cp-heading-outer">';
 					$output .= '<h2>'.$videogo_listing_category.'</h2>';
 					$output .= '<ul class="cp-listed">';
-					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">View All</a></li>';
+					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">更多</a></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '<div class="featured-blocks">';
@@ -364,7 +364,7 @@ if(!class_exists("videogo_video_listings")){
 					$output .= '<div class="cp-heading-outer">';
 					$output .= '<h2>'.$videogo_listing_category.'</h2>';
 					$output .= '<ul class="cp-listed">';
-					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">View All</a></li>';
+					$output .= '<li class="view-all"><a href="'.esc_url( $category_link ).'">更多</a></li>';
 					$output .= '</ul>';
 					$output .= '</div>';
 					$output .= '<div class="row">';
